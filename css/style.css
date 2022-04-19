@@ -1,9 +1,60 @@
-.image_container {
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'poppins',sans-serif;
+    color:#a0a0a0;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    padding:0 10px;
+    text-decoration: none;
+    
+
+}
+a:after{
+    content: " ";
+    position: absolute;
+    background-color: #ff3c4c;
+    height:3px;
+    width: 0;
+    left:0;
+    bottom:-10px;
+    transition: 0.3s;
+    
+}
+a:hover{
+    color: rgb(133, 133, 137);
+    text-decoration: none;
+    text-transform: capitalize;
+    text-decoration: none;
+
+}
+a:hover:after{
+width: 100%;
+
+}
+body, ul, li, img, p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    align-items: center;
+}
+.image_google {
     display: flex;
     justify-content: center;
 
 }
-.image_container img{
+.image_google img{
     width: 100%;
     max-width: 271px;
     padding-top: 109px; 
@@ -13,6 +64,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+
 }
 
 .Google_Search input {
@@ -37,6 +90,7 @@
 li {
     list-style-type: none;
     padding: 0 10px;
+    text-decoration: none;
 }
 a,s {
     text-decoration: none;
@@ -46,32 +100,43 @@ a,s {
 
 a:hover {
     text-decoration: underline;
+    text-decoration: none;
 }
-
+p {
+    text-align: center;
+}
 
 /* --------- Header --------- */
 
 header {
     display: flex;
     height: 10vh;
+  
 }
 header a {
     color: #333;
+    list-style: none;
 }
 header  ul {
-    display: flex;
+    
     flex-grow: 1;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     padding: 0 15px;
+    display: flex;
+    list-style: none;
+   
 }
+/* --------- End Header --------- */
 
-.buttons {
+.button_search {
     display: flex;
     justify-content: center;
+    justify-content: center;
+   
 }
-.buttons input {
+.button_search input {
     color: #5F6368;
     border: 1px solid #f2f2f2;
     margin: 11px 4px;
@@ -85,14 +150,16 @@ header  ul {
 section {
     height: 75vh;
 }
-    body, ul, li, img, p, h1, h2, h3, h4, h5, h6, hr {
+    body, ul, li, img, p, hr {
         margin: 0;
         padding: 0;
         font-family: sans-serif;
+    
     }
 
 a:hover {
     text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ------------ Footer -------- */
@@ -119,8 +186,6 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-around;
-    align-items: center;
     
 }
 /* ------  Search Bar ----------*/
@@ -139,17 +204,17 @@ footer {
     border-radius: 30px;
     padding-left: 50px;
     margin: 30px 0;
+    justify-content: center;
+    align-items: center;
 }
 .search_bar > input:hover {
-    box-shadow: 0 0 5px  rgba(0,0,0, 0.2);
+    box-shadow: 0 0 5px  rgba(15, 15, 15, 0.2);
 }
 .search_bar i {
     width: 50px;
     position: relative;
     left: 68px;
 }
-
-
 
 
 

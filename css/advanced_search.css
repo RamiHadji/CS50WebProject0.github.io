@@ -17,6 +17,7 @@ a, i {
 }
 a:hover {
     text-decoration: underline;
+    text-decoration: none;
 }
 
 /* --------- Header --------- */
@@ -36,6 +37,10 @@ header  ul {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    align-items: flex-end;
+  
 }
 header img{
     width: 100px;
@@ -44,9 +49,10 @@ header img{
 header #logo {
     grid-column: 1 / 2; 
 }
-header #back_to_main {
-    grid-column: 2 / 3;
-    justify-self: end;
+header #Home {
+    grid-column: 3 / 3;
+    align-items: flex-end;
+    
 }
 
 /* --------- Main ------- */
@@ -95,14 +101,14 @@ input {
     height: 25px;
     padding: 1px 8px;
 }
-.label_item1 { grid-area: label1;}
-.input_item1 { grid-area: input1;}
-.label_item2 { grid-area: label2;}
-.input_item2 { grid-area: input2;}
-.label_item3 { grid-area: label3;}
-.input_item3 { grid-area: input3;}
-.label_item4 { grid-area: label4;}
-.input_item4 { grid-area: input4;}
+.label1 { grid-area: label1;}
+.input1 { grid-area: input1;}
+.label2 { grid-area: label2;}
+.input2 { grid-area: input2;}
+.label3 { grid-area: label3;}
+.input3 { grid-area: input3;}
+.label4 { grid-area: label4;}
+.input4 { grid-area: input4;}
 .button {   
     grid-area: button;  
     justify-self: end;
@@ -151,5 +157,40 @@ footer {
 
 
 
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'poppins',sans-serif;
+    color:#a0a0a0;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    padding:0 10px;
+    justify-self: end;
+    
+
+}
+a:after{
+    content: " ";
+    position: absolute;
+    background-color: #ff3c78;
+    height:3px;
+    width: 0;
+    left:0;
+    bottom:-10px;
+    transition: 0.3s;
+    
+}
+a:hover{
+color: rgb(133, 129, 129);
+text-decoration: none;
+text-transform: capitalize;
+
+}
+
+a:hover:after{
+width: 100%;
+
+}
 
 
